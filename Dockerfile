@@ -1,6 +1,8 @@
 FROM openjdk:7
 
-COPY "c:\Program Files (x86)\workspace\HelloWorld\ES2-LEIPL-2020\src\main\java\es2-leipl.jar" /src/main/java/
+CMD ["ECHO", "$PATH"]
+
+COPY es2-leipl.jar /src/main/java/
 
 WORKDIR /src/main/java/
 
