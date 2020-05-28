@@ -15,7 +15,7 @@ node {
     }
 
     stage('Running Container to Test'){
-        powershell "docker run -it --rm --name ${container} ${imagename}"
+        powershell "docker run -it --name ${container} ${imagename}"
     }
     
     stage('Pushing Images to DockerHub'){
