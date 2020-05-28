@@ -18,6 +18,9 @@ node {
         powershell "docker run -i --rm --name ${container} ${imagename}"
     }
     
+    stage('Creating new Image'){
+        powershell "docker tag ${imagename} ${env.dockeruser}/${imagename}"
+    
     stage('Pushing Images to DockerHub'){
        withCredentials([usernamePassword(credentialsId: 'docker-hub-credentials', passwordVariable: 'dockerpasswd', usernameVariable: 'dockeruser')]) {
            powershell "docker login -u ${dockeruser} -p ${dockerpasswd}"
