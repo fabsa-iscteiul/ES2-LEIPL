@@ -22,7 +22,7 @@ node {
        withCredentials([usernamePassword(credentialsId: 'docker-hub-credentials', passwordVariable: 'dockerpasswd', usernameVariable: 'dockeruser')]) {
            powershell "docker login -u ${dockeruser} -p ${dockerpasswd}"
        }
-        powershell "docker push ${dockeruser}/openjdk:7"
+        powershell "docker push ${dockeruser}/${imagename}"
     }
     
 }
