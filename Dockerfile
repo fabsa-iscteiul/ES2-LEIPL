@@ -1,8 +1,6 @@
 FROM openjdk:7
 
-CMD ["ECHO", "$PATH"]
-
-COPY es2-leipl.jar /src/main/java/
+COPY --from=build ES2-LEIPL-2020/src/main/java/es2-leipl.jar /src/main/java/
 
 WORKDIR /src/main/java/
 
