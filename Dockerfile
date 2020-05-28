@@ -1,6 +1,6 @@
 FROM openjdk:7
 
-COPY ./src/main/java/es2-leipl.jar /src/main/java/
+COPY https://github.com/fabsa-iscteiul/ES2-LEIPL/ES2-LEIPL-2020/src/main/java/es2-leipl.jar /src/main/java/
 
 WORKDIR /src/main/java/
 
