@@ -11,7 +11,7 @@ node {
     }
 
     stage('Build Docker Image'){
-        powershell "docker build -t ${imagename} -f- ."
+        powershell "docker build -t ${imagename} ."
     }
 
     stage('Running Container to Test'){
