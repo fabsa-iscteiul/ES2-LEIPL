@@ -19,7 +19,7 @@ node {
     }
     
     stage('Creating new Image'){
-        powershell "docker tag ${imagename} ${env.dockeruser}/${imagename}"
+        powershell "docker tag ${imagename} ${dockeruser}/${imagename}"
     }
     
     stage('Pushing Images to DockerHub'){
